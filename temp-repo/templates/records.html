@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF‑8"><title>Records</title>
+  <style>
+    body{font-family:Arial;margin:2em;}
+    table{border-collapse:collapse;width:100%;margin-top:1em;}
+    th,td{border:1px solid #ccc;padding:.5em;}
+    th{background:#eee;}
+  </style>
+</head>
+<body>
+  <h1>All Entries</h1>
+  <a href="/">« back</a>
+  {% if entries %}
+  <table>
+    <tr><th>Name</th><th>Address</th></tr>
+    {% for e in entries %}
+      <tr><td>{{ e.name }}</td><td>{{ e.address }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>No records found.</p>
+  {% endif %}
+</body>
+</html>
+

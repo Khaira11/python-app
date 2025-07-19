@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF‑8"><title>Add Entry</title>
+  <style>
+    body{font-family:Arial;margin:2em;}
+    input,button{padding:.5em;margin:.3em;}
+  </style>
+</head>
+<body>
+  <h1>Address Book</h1>
+  <form method="post" action="/">
+    <input name="name" placeholder="Name" required>
+    <input name="address" placeholder="Address" required>
+    <button type="submit">Add Entry</button>
+  </form>
+
+  <form method="get" action="/view">
+    <button type="submit">View Records</button>
+  </form>
+</body>
+</html>
+

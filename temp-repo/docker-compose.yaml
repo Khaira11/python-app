@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://user:harpreet@db:5432/mydb
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: harpreet
+      POSTGRES_PASSWORD: harpreet
+      POSTGRES_DB: mydb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
